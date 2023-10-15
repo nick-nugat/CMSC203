@@ -25,6 +25,15 @@ public class ArrayDemo {
         System.out.println(Arrays.toString(nums2));
 
 
+        //array of presons size 3
+        Person[] persons = new Person[3];
+
+        //first element of persons toPerson object with name "Kate and age 20
+        persons[0] = new Person("Kate", 20);
+        for(int i = 0; i < persons.length; i++)
+            System.out.println(persons[i]);
+
+        persons[persons.length - 1] = new Person(persons[0].getName(), persons[0].getAge());
         
     }
 }

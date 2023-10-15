@@ -21,7 +21,7 @@
 ![[Attachments/Pasted image 20230927214538.png|500]]
 
 ## UML diagram
-![[Attachments/Assignment2.png]]
+![[Attachments/UMLDiagram_Assignment2.png]]
 
 
 ## Pseudocode

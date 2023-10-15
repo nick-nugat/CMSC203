@@ -55,31 +55,6 @@ public class CryptoManager {
 		}
 		return new String(encrypted);
 	}
-
-	
-	/**
-	 * Encrypts a string according the Bellaso Cipher.  Each character in plainText is offset 
-	 * according to the ASCII value of the corresponding character in bellasoStr, which is repeated
-	 * to correspond to the length of plainText
-	 * @param plainText an uppercase string to be encrypted.
-	 * @param bellasoStr an uppercase string that specifies the offsets, character by character.
-	 * @return the encrypted string
-	 */
-	public static String bellasoEncryption(String plainText, String bellasoStr) {
-        char[] plain = plainText.toCharArray();
-        char[] encrypted = new char[plain.length];
-
-        for (int i = 0; i < plain.length; i++) {
-            char plainChar = plain[i];
-            char bellasoChar = bellasoStr.charAt(i % bellasoStr.length());
-            int encryptedCharValue = (plainChar + bellasoChar - LOWER_RANGE) % RANGE + LOWER_RANGE;
-
-            encrypted[i] = (char) encryptedCharValue;
-        }
-
-        return new String(encrypted);
-    }
-	
 	/**
 	 * Decrypts a string according to the Caesar Cipher.  The integer key specifies an offset
 	 * and each character in encryptedText is replaced by the character \"offset\" characters before it.
@@ -105,6 +80,30 @@ public class CryptoManager {
 	}
 	
 	/**
+	 * Encrypts a string according the Bellaso Cipher.  Each character in plainText is offset 
+	 * according to the ASCII value of the corresponding character in bellasoStr, which is repeated
+	 * to correspond to the length of plainText
+	 * @param plainText an uppercase string to be encrypted.
+	 * @param bellasoStr an uppercase string that specifies the offsets, character by character.
+	 * @return the encrypted string
+	 */
+	public static String bellasoEncryption(String plainText, String bellasoStr) {
+        char[] plain = plainText.toCharArray();
+        char[] encrypted = new char[plain.length];
+
+        for (int i = 0; i < plain.length; i++) {
+            char plainChar = plain[i];
+            char bellasoChar = bellasoStr.charAt(i % bellasoStr.length());
+			int totalOfChar = plainChar + bellasoChar;
+            int encryptedCharValue = ((totalOfChar - LOWER_RANGE) % RANGE) + LOWER_RANGE;
+
+            encrypted[i] = (char) encryptedCharValue;
+        }
+
+        return new String(encrypted);
+    }
+	
+	/**
 	 * Decrypts a string according the Bellaso Cipher.  Each character in encryptedText is replaced by
 	 * the character corresponding to the character in bellasoStr, which is repeated
 	 * to correspond to the length of plainText.  This is the inverse of the encryptBellaso method.
@@ -113,21 +112,25 @@ public class CryptoManager {
 	 * @return the decrypted string
 	 */
 	public static String bellasoDecryption(String encryptedText, String bellasoStr) {
-		char[] encrypted = encryptedText.toCharArray();
-		char[] decrypted = new char[encrypted.length];
-	 
-		for (int i = 0; i < encrypted.length; i++) {
-		    char encryptedChar = encrypted[i];
-		    char bellasoChar = bellasoStr.charAt(i % bellasoStr.length());
-	 
-		    // Calculate the decrypted character value (taking wrapping into account)
-		    int decryptedCharValue = (encryptedChar - bellasoChar + UPPER_RANGE) % RANGE - UPPER_RANGE;
-	 
-		    decrypted[i] = (char) decryptedCharValue;
-		}
-	 
-		return new String(decrypted);
-	 }
+        char[] encrypted = encryptedText.toCharArray();
+        char[] decrypted = new char[encrypted.length];
+     
+        for (int i = 0; i < encrypted.length; i++) {
+            char encryptedChar = encrypted[i];
+            char bellasoChar = bellasoStr.charAt(i % bellasoStr.length());
+            // Calculate the decrypted character value (taking wrapping into account)
+            int decryptedCharValue = encryptedChar - bellasoChar;
+
+            // Reverse modulo
+            while (decryptedCharValue < LOWER_RANGE) decryptedCharValue += RANGE;
+
+            while (decryptedCharValue > UPPER_RANGE) decryptedCharValue -= RANGE;
+
+            decrypted[i] = (char) decryptedCharValue;
+        }
+     
+        return new String(decrypted);
+     }
 	 
 	 
 	 
