@@ -2,7 +2,7 @@
 /**
  * This is a utility class that encrypts and decrypts a phrase using two
  * different approaches. The first approach is called the Caesar Cipher and is a
- * simple “substitution cipher” where characters in a message are replaced by a
+ * simple ï¿½substitution cipherï¿½ where characters in a message are replaced by a
  * substitute character. The second approach, due to Giovan Battista Bellaso,
  * uses a key word, where each character in the word specifies the offset for
  * the corresponding character in the message, with the key word wrapping around
@@ -23,8 +23,14 @@ public class CryptoManager {
 	 * @param plainText a string to be encrypted, if it is within the allowable bounds
 	 * @return true if all characters are within the allowable bounds, false if any character is outside
 	 */
-	public static boolean isStringInBounds (String plainText) {
-		throw new RuntimeException("method not implemented");
+	public static boolean isStringInBounds(String plainText) {
+		for (int i = 0; i < plainText.length(); i++) {
+			char c = plainText.charAt(i);
+			if (c < LOWER_RANGE || c > UPPER_RANGE) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 	/**
@@ -35,8 +41,21 @@ public class CryptoManager {
 	 * @return the encrypted string
 	 */
 	public static String caesarEncryption(String plainText, int key) {
-		throw new RuntimeException("method not implemented");
+		if (!isStringInBounds(plainText)) return "The selected string is not in bounds, Try again.";
+		while (key > UPPER_RANGE) key -= RANGE;
+
+		char[] plain = plainText.toCharArray(),
+			   encrypted = new char[plain.length];
+
+		for (int i = 0; i < plainText.length(); i++){
+			char value = plain[i];
+			value += key;
+			while (value > UPPER_RANGE) value -= RANGE;
+			encrypted[i] = value;
+		}
+		return new String(encrypted);
 	}
+
 	
 	/**
 	 * Encrypts a string according the Bellaso Cipher.  Each character in plainText is offset 
@@ -46,9 +65,20 @@ public class CryptoManager {
 	 * @param bellasoStr an uppercase string that specifies the offsets, character by character.
 	 * @return the encrypted string
 	 */
-	public static String bellasoEncryption (String plainText, String bellasoStr) {
-		throw new RuntimeException("method not implemented");
-	}
+	public static String bellasoEncryption(String plainText, String bellasoStr) {
+        char[] plain = plainText.toCharArray();
+        char[] encrypted = new char[plain.length];
+
+        for (int i = 0; i < plain.length; i++) {
+            char plainChar = plain[i];
+            char bellasoChar = bellasoStr.charAt(i % bellasoStr.length());
+            int encryptedCharValue = (plainChar + bellasoChar - LOWER_RANGE) % RANGE + LOWER_RANGE;
+
+            encrypted[i] = (char) encryptedCharValue;
+        }
+
+        return new String(encrypted);
+    }
 	
 	/**
 	 * Decrypts a string according to the Caesar Cipher.  The integer key specifies an offset
@@ -59,7 +89,19 @@ public class CryptoManager {
 	 * @return the plain text string
 	 */
 	public static String caesarDecryption (String encryptedText, int key) {
-		throw new RuntimeException("method not implemented");
+		if (!isStringInBounds(encryptedText)) return "The selected string is not in bounds, Try again.";
+		while (key > UPPER_RANGE) key -= RANGE;
+
+		char[] encrypted = encryptedText.toCharArray();
+		char[] decrypted = new char[encrypted.length];
+
+		for (int i = 0; i < encryptedText.length(); i++){
+			char value = encrypted[i];
+			value -= key;
+			while (value < LOWER_RANGE) value += RANGE;
+			decrypted[i] = value;
+		}
+		return new String(decrypted);
 	}
 	
 	/**
@@ -71,6 +113,25 @@ public class CryptoManager {
 	 * @return the decrypted string
 	 */
 	public static String bellasoDecryption(String encryptedText, String bellasoStr) {
-		throw new RuntimeException("method not implemented");
-	}
+		char[] encrypted = encryptedText.toCharArray();
+		char[] decrypted = new char[encrypted.length];
+	 
+		for (int i = 0; i < encrypted.length; i++) {
+		    char encryptedChar = encrypted[i];
+		    char bellasoChar = bellasoStr.charAt(i % bellasoStr.length());
+	 
+		    // Calculate the decrypted character value (taking wrapping into account)
+		    int decryptedCharValue = (encryptedChar - bellasoChar + UPPER_RANGE) % RANGE - UPPER_RANGE;
+	 
+		    decrypted[i] = (char) decryptedCharValue;
+		}
+	 
+		return new String(decrypted);
+	 }
+	 
+	 
+	 
+	 
 }
+
+
