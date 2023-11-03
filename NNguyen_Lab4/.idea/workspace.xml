@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="94faf146-0c60-4178-96c4-87c6ea979e79" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../IntelliJTesting/IntelliJTesting.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NNguyen_Assignment4/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NNguyen_Assignment4/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NNguyen_Assignment4/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NNguyen_Assignment4/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NNguyen_Assignment4/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NNguyen_Assignment4/NNguyen_Assignment4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NNguyen_Assignment4/src/ManagementCompany.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NNguyen_Assignment4/src/ManagementCompanyGFATest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NNguyen_Assignment4/src/MgmCompanyGui.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NNguyen_Assignment4/src/Plot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NNguyen_Assignment4/src/PlotTestGFA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NNguyen_Assignment4/src/Property.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NNguyen_Assignment4/src/PropertyTestGFA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TestingPlayground/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TestingPlayground/.idea/libraries/junit_platform_console_standalone_1_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TestingPlayground/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TestingPlayground/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TestingPlayground/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TestingPlayground/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TestingPlayground/TestingPlayground.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TestingPlayground/src/leetcode/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TestingPlayground/src/scratch/Area.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TestingPlayground/src/scratch/Committee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TestingPlayground/src/scratch/LandTract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TestingPlayground/src/scratch/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AttemptingAPasswordGenerator/src/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../AttemptingAPasswordGenerator/src/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/NNguyen - Assignment 3.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment3/NNguyen - Assignment 3.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/src/CryptoManagerTestStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment3/src/CryptoManagerTestStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Testing_Playground/src/ArrayDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Testing_Playground/src/EncryptionPractice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Testing_Playground/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Testing_Playground/src/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Testing_Playground/src/ReadFromFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Testing_Playground/src/WriteFile.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2XARSyOXAakoNkFyCiWgijnxG0B" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/nick/Documents/NguyenN_Vault/Code/learning-java/CMSC203/Lab4",
+    "settings.editor.selected.configurable": "configurable.group.appearance"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="94faf146-0c60-4178-96c4-87c6ea979e79" name="Changes" comment="" />
+      <created>1698069901360</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698069901360</updated>
+    </task>
+    <servers />
+  </component>
+</project>
