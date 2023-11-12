@@ -136,8 +136,7 @@ public class ManagementCompany {
         Property highestRentProperty = properties[0]; // Assume the first property has the highest rent
 
         for (int i = 1; i < properties.length; i++) {
-            if (properties[i] != null
-                    && properties[i].getRentAmount() > highestRentProperty.getRentAmount()) {
+            if (properties[i] != null && properties[i].getRentAmount() > highestRentProperty.getRentAmount()) {
                 highestRentProperty = properties[i]; // Update the highest rent property
             }
         }
