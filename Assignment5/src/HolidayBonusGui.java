@@ -1,8 +1,3 @@
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.text.NumberFormat;
-
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -21,6 +16,10 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.text.NumberFormat;
 
 /**
  * This class represents the Holiday Bonus GUI.

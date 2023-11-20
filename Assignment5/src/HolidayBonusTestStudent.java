@@ -7,9 +7,9 @@ import static org.junit.Assert.assertEquals;
 public class HolidayBonusTestStudent {
 
 	private double[][] dataSet1 = {
-			{8, 6, 2, 2},
-			{9, 4},
-			{4, 1, 5, 3}
+			{8, 6, 2, 2}, //9000 = (2000 + 5000 + 1000 + 1000)
+			{9, 4}, //7000 = (5000 + 2000)
+			{4, 1, 5, 3} //12000 = (1000 + 1000 + 5000 + 5000)
 	};
 
 	@Before
