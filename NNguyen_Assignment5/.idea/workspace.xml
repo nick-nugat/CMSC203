@@ -5,49 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6abee368-f8be-4eed-9a89-5864ac366530" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/CMSC206_Lab6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/lib1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/lib2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CMSC203.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NNguyen_Assignment1/NNguyen_Assignment1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NNguyen_Assignment2/NNguyen_Assignment2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NNguyen_Assignment3/NNguyen_Assignment3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20231120_NNguyen_Assignment5.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NNguyen_Assignment5.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studentDataset2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NNguyen_Lab1/NNguyen_Lab1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NNguyen_Lab3/NNguyen_Lab3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NNguyen_Lab4/NNguyen_Lab4.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment5/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment5/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment5/.idea/libraries/lib.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment5/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment5/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment5/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment5/Assignment5.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment5/dataSet1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dataSet1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment5/dataSet2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dataSet2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment5/dataSet3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dataSet3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment5/dataSet4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dataSet4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment5/district3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/district3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment5/district4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/district4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment5/district5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/district5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment5/src/HolidayBonus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HolidayBonus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment5/src/HolidayBonusGFATest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HolidayBonusGFATest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment5/src/HolidayBonusGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HolidayBonusGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment5/src/HolidayBonusTestStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HolidayBonusTestStudent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment5/src/TwoDimRaggedArrayUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TwoDimRaggedArrayUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment5/src/TwoDimRaggedArrayUtilityGFATest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TwoDimRaggedArrayUtilityGFATest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment5/src/TwoDimRaggedArrayUtilityTestStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TwoDimRaggedArrayUtilityTestStudent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment5/studentDataset.txt" beforeDir="false" afterPath="$PROJECT_DIR$/studentDataset1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NNguyen_Assignment4/NNguyen_Assignment4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../NNguyen_Assignment4/NNguyen_Assignment4.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../program comment header.md" beforeDir="false" afterPath="$PROJECT_DIR$/../program comment header.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TestingPlayground/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestingPlayground/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20231120_NNguyen_Assignment5.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/20231120_NNguyen_Assignment5.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NNguyen_Assignment5_Complete/20231120_NNguyen_Assignment5.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NNguyen_Assignment5_Complete/HolidayBonus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NNguyen_Assignment5_Complete/HolidayBonusTestStudent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NNguyen_Assignment5_Complete/TwoDimRaggedArrayUtility.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NNguyen_Assignment5_Complete/TwoDimRaggedArrayUtilityTestStudent.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +39,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
