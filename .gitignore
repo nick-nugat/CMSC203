@@ -1,5 +1,11 @@
+# IntelliJ
+**/.idea/
+**/.vscode/
+**/.iml/
 
-
+# Personal files/notes
+program comment header.md
+questions to answer.md
 
 # macOS
 .DS_Store
