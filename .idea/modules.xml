@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CMSC203.iml" filepath="$PROJECT_DIR$/CMSC203.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NNguyen_Assignment1/NNguyen_Assignment1.iml" filepath="$PROJECT_DIR$/NNguyen_Assignment1/NNguyen_Assignment1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NNguyen_Assignment2/NNguyen_Assignment2.iml" filepath="$PROJECT_DIR$/NNguyen_Assignment2/NNguyen_Assignment2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NNguyen_Assignment3/NNguyen_Assignment3.iml" filepath="$PROJECT_DIR$/NNguyen_Assignment3/NNguyen_Assignment3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NNguyen_Assignment4/NNguyen_Assignment4.iml" filepath="$PROJECT_DIR$/NNguyen_Assignment4/NNguyen_Assignment4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NNguyen_Assignment5/NNguyen_Assignment5.iml" filepath="$PROJECT_DIR$/NNguyen_Assignment5/NNguyen_Assignment5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NNguyen_Lab1/NNguyen_Lab1.iml" filepath="$PROJECT_DIR$/NNguyen_Lab1/NNguyen_Lab1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NNguyen_Lab3/NNguyen_Lab3.iml" filepath="$PROJECT_DIR$/NNguyen_Lab3/NNguyen_Lab3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NNguyen_Lab4/NNguyen_Lab4.iml" filepath="$PROJECT_DIR$/NNguyen_Lab4/NNguyen_Lab4.iml" />
+    </modules>
+  </component>
+</project>
