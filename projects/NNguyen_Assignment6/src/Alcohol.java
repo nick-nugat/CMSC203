@@ -12,18 +12,16 @@ public class Alcohol extends Beverage {
 	public boolean equals(Object obj) {
 		Alcohol other = (Alcohol) obj;
 
-		return
-			super.equals(other) &&
-			getBasePrice() == other.getBasePrice() &&
-			isWeekend == other.isWeekend;
+		return super.equals(other)
+				&& getBasePrice() == other.getBasePrice()
+				&& isWeekend == other.isWeekend;
 	}
 
 	@Override
 	public String toString() {
-		return
-			super.toString() +
-			"Available on weekend: " + isWeekend + "\n" +
-			"Price: " + calcPrice();
+		return super.toString()
+				+ "Available on weekend: " + isWeekend + "\n"
+				+ "Price: " + calcPrice();
 	}
 
 	@Override

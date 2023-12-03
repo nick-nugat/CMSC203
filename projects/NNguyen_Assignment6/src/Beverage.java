@@ -1,7 +1,8 @@
 public abstract class Beverage {
-	private static final double SIZE_PRICE = 1;
+	private static final double
+		SIZE_PRICE = 1,
+		BASE_PRICE = 2;
 
-	private double basePrice;
 	private String name; //name of beverage
 	private Type type;
 	private Size size;
@@ -15,11 +16,11 @@ public abstract class Beverage {
 
 	public abstract double calcPrice();
 
-	public double getBasePrice() { return basePrice; }
+	public double getBasePrice() { return BASE_PRICE; }
 	public String getName() { return name; }
 	public Type getType() { return type; }
 	public Size getSize() { return size; }
-	public double addSizePrice() { return basePrice + SIZE_PRICE;}
+	public double addSizePrice() { return BASE_PRICE + SIZE_PRICE;}
 
 	@Override
 	public boolean equals(Object obj){
@@ -32,7 +33,7 @@ public abstract class Beverage {
 
 	@Override
 	public String toString() {
-		return "Name: " + name + "\n"
-			 + "Size: " +  size;
+		return "Name: " + name
+			 + "\nSize: " +  size;
 	}
 }

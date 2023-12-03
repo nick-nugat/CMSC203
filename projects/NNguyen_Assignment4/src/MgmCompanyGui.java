@@ -1,3 +1,7 @@
+
+import java.util.ArrayList;
+import java.util.Collections;
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -5,17 +9,18 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.control.TitledPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
-
-import java.util.ArrayList;
-import java.util.Collections;
 
 /**
  * This class represents the Management Company GUI.
@@ -217,7 +222,7 @@ public class MgmCompanyGui extends Application {
 	}
 	
 	private String displayHighetstRentPropertyInfo() {
-		Property highestRentProperty = mgmCompany.getHighestRentProperty();
+		Property highestRentProperty = mgmCompany.getHighestRentPropperty();
 		String value = "Property Name: " + highestRentProperty.getPropertyName() + 
 				"\n Located in " + highestRentProperty.getCity() + "\n Belonging to: " + highestRentProperty.getOwner()
 								+ "\n Rent Amount: " + highestRentProperty.getRentAmount();
