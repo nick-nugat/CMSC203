@@ -7,12 +7,12 @@ public class Coffee extends Beverage {
 		this.extraSyrup = extraSyrup;
 	}
 
-	public boolean isExtraShot() { return extraShot; }
-	public boolean isExtraSyrup() { return extraSyrup; }
+	public boolean getExtraShot() { return extraShot; }
+	public boolean getExtraSyrup() { return extraSyrup; }
 
 	@Override
 	public double calcPrice() {
-		double price = getBasePrice();
+		double price = addSizePrice();
 
 		if (extraSyrup) price += 0.50;
 		if (extraShot) price += 0.50;
@@ -26,16 +26,16 @@ public class Coffee extends Beverage {
 
 		return super.equals(other)
 			&& getBasePrice() == other.getBasePrice()
-			&& isExtraShot() == other.isExtraShot()
-			&& isExtraSyrup() == other.isExtraSyrup();
+			&& getExtraShot() == other.getExtraShot()
+			&& getExtraSyrup() == other.getExtraSyrup();
 	}
 
 	@Override
 	public String toString(){
-		return getName() + "," +
-				getSize() + "," +
-				"Extra shot: " + extraShot + "," +
-				"Extra syrup: " + extraSyrup +
-				"Price: " + calcPrice();
+		return getName() + ","
+				+ getSize() + ","
+				+ "Extra shot: " + extraShot + ","
+				+ "Extra syrup: " + extraSyrup
+				+ "Price: " + calcPrice();
 	}
 }

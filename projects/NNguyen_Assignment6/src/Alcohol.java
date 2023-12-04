@@ -1,12 +1,16 @@
 public class Alcohol extends Beverage {
-	private final boolean isWeekend;
+	private boolean isWeekend;
+//	private Day day;
 
 	public Alcohol(String name, Size size, boolean isWeekend){
 		super(name, Type.ALCOHOL, size);
 		this.isWeekend = isWeekend;
 	}
 
-	public boolean isWeekend() { return isWeekend; }
+//	public boolean isWeekend() {
+//		isWeekend = (day == Day.SATURDAY || day == Day.SUNDAY);
+//		return isWeekend;
+//	}
 
 	@Override
 	public boolean equals(Object obj) {
@@ -26,7 +30,7 @@ public class Alcohol extends Beverage {
 
 	@Override
 	public double calcPrice() {
-		double price = getBasePrice();
+		double price = addSizePrice();
 		if (isWeekend) price += 0.60;
 		return price;
 

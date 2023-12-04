@@ -8,7 +8,8 @@ public class Customer {
 	}
 
 	public Customer(Customer c){
-		this(c.name, c.age);
+		this.name = new String(c.name);
+		this.age = c.age;
 	}
 
 	public String getName() { return name; }

@@ -1,19 +1,19 @@
 public class Smoothie extends Beverage {
-	private int numOfFruits;
-	private boolean proteinAdded;
+	private final int numOfFruits;
+	private final boolean addProtein;
 
-	public Smoothie(String name, Size size, int numOfFruits, boolean proteinAdded) {
+	public Smoothie(String name, Size size, int numOfFruits, boolean addProtein) {
 		super(name, Type.SMOOTHIE, size);
 		this.numOfFruits = numOfFruits;
-		this.proteinAdded = proteinAdded;
+		this.addProtein = addProtein;
 	}
 
 	@Override
 	public double calcPrice() {
-		double price = getBasePrice();
+		double price = addSizePrice();
 
-		if (proteinAdded) price += 1.50;
-		price += numOfFruits * 0.50;
+		if (addProtein) price += 1.50;
+		if (numOfFruits != 0) price += numOfFruits * 0.50;
 
 		return price;
 	}
@@ -23,18 +23,19 @@ public class Smoothie extends Beverage {
 		Smoothie other = (Smoothie) obj;
 
 		return super.equals(other)
+				&& getBasePrice() == other.getBasePrice()
 				&& numOfFruits == other.numOfFruits
-				&& proteinAdded == other.proteinAdded;
+				&& addProtein == other.addProtein;
 	}
 
 	public String toString(){
 		return super.toString()
-				+ "Protein added: " + proteinAdded + "\n"
+				+ "Protein added: " + addProtein + "\n"
 				+ "Number of fruits: " + numOfFruits + "\n"
 				+ "Price: " + calcPrice();
 	}
 
 	public int getNumOfFruits() { return numOfFruits; }
 
-	public boolean isProteinAdded() { return proteinAdded; }
+	public boolean getAddProtein() { return addProtein; }
 }
