@@ -1,77 +1,115 @@
+/*
+ * Class: CMSC203
+ * Instructor: Professor Monshi
+ * Description:
+ * Due: 12/06/2023
+ * Platform/compiler: javac
+ * I pledge that I have completed the programming assignment
+ * independently. I have not copied the code from a student or any source. I have not given my code to any student.
+ * Print your Name here: Nicholas Nguyen
+ */
+
 import java.util.ArrayList;
 
 public class BevShop implements BevShopInterface {
 	private int numOfAlcohol;
-	public ArrayList<Order> orders;
+	public ArrayList<Order> orders = new ArrayList<>();
 
-	public BevShop(){}
+	//no-args constructor
+	public BevShop(){ numOfAlcohol = 0; }
 
-	@Override
-	public boolean isValidTime(int time) { return (time >= MIN_TIME) && (time <= MAX_TIME); }
-	@Override
-	public int getMaxNumOfFruits() { return MAX_FRUIT; }
-	@Override
-	public int getMinAgeForAlcohol() { return MIN_AGE_FOR_ALCOHOL; }
+	//getters
+	public int getNumOfAlcoholDrink() {
+		for (int i = 0; i < getCurrentOrder().beverages.size(); i++)
+			if (getCurrentOrder().beverages.get(i).getType() == Type.ALCOHOL)
+				numOfAlcohol++;
 
-	@Override
-	public boolean isMaxFruit(int numOfFruits) { return numOfFruits > MAX_FRUIT; }
+		return numOfAlcohol;
+	}
+	public Order getOrderAtIndex(int index) {
+		Order o = orders.get(index);
+		return new Order(o.getOrderTime(), o.getOrderDay(), o.getCustomer());
+	}
 
-	@Override
-	public int getMaxOrderForAlcohol() { return MAX_ORDER_FOR_ALCOHOL; }
+	public boolean isValidTime(int time) {
+		return (time >= MIN_TIME) && (time <= MAX_TIME);
+	}
 
-	@Override
-	public boolean isEligibleForMore() { return numOfAlcohol < MAX_ORDER_FOR_ALCOHOL; }
+	public boolean isValidAge(int age) {
+		return age > MIN_AGE_FOR_ALCOHOL;
+	}
 
-	@Override
-	public int getNumOfAlcoholDrink() { return numOfAlcohol; }
+	public boolean isMaxFruit(int numOfFruits) {
+		return numOfFruits > MAX_FRUIT;
+	}
 
-	@Override
-	public boolean isValidAge(int age) { return age > MIN_AGE_FOR_ALCOHOL; }
+	public boolean isEligibleForMore() {
+		return numOfAlcohol < MAX_ORDER_FOR_ALCOHOL;
+	}
 
-	@Override
+	public int getMaxNumOfFruits() {
+		return MAX_FRUIT;
+	}
+
+	public int getMinAgeForAlcohol() {
+		return MIN_AGE_FOR_ALCOHOL;
+	}
+
+	public int getMaxOrderForAlcohol() {
+		return MAX_ORDER_FOR_ALCOHOL;
+	}
+
+	public int totalNumOfMonthlyOrders() {
+		return orders.size();
+	}
+
+	public Order getCurrentOrder() {
+		return orders.get(orders.size() - 1);
+	}
+
+	//starts a new order
 	public void startNewOrder(int time, Day day, String customerName, int customerAge) {
 		Customer customer = new Customer(customerName, customerAge);
-		Order order = new Order(time, day, customer);
+		orders.add(new Order(time, day, customer));
 	}
 
-	@Override
+	//process coffee
 	public void processCoffeeOrder(String bevName, Size size, boolean extraShot, boolean extraSyrup) {
-		Coffee coffee = new Coffee(bevName, size, extraShot, extraSyrup);
+		getCurrentOrder().addNewBeverage(bevName, size, extraShot,extraSyrup);
 	}
 
-	@Override
+	//process alcohol
 	public void processAlcoholOrder(String bevName, Size size) {
-		Alcohol alcohol = new Alcohol(bevName, size, getCurrentOrder().isWeekend());
+		getCurrentOrder().addNewBeverage(bevName, size);
 	}
 
-	@Override
+	//process smoothie
 	public void processSmoothieOrder(String bevName, Size size, int numOfFruits, boolean addProtein) {
-		Smoothie smoothie = new Smoothie(bevName, size, numOfFruits, addProtein);
+		getCurrentOrder().addNewBeverage(bevName, size, numOfFruits, addProtein);
 	}
 
-	@Override
+	//find order at orderno
 	public int findOrder(int orderNo) {
-		for (int i = 0; i < orders.size(); i++) {
-			int orderAtIndexNo = orders.get(i).getOrderNo();
-			if (orderAtIndexNo == orderNo) return i;
-		}
+		for (int i = 0; i < orders.size(); i++)
+			if (orders.get(i).getOrderNo() == orderNo)
+				return i;
+
 		return -1;
 	}
 
-	@Override
 	public double totalOrderPrice(int orderNo) {
 		double total = 0;
+		int i = 0;
 
-		for (Order order : orders) {
-			int orderAtIndexNo = order.getOrderNo();
-			if (orderAtIndexNo == orderNo)
-				total = getCurrentOrder().calcOrderTotal();
-		}
+		for (; i < orders.size(); i++)
+			if (orders.get(i).getOrderNo() == orderNo) break;
+
+		for (int j = 0; j < orders.get(i).beverages.size(); j++)
+			total += orders.get(i).beverages.get(j).calcPrice();
 
 		return total;
 	}
 
-	@Override
 	public double totalMonthlySale() {
 		double total = 0;
 
@@ -81,31 +119,33 @@ public class BevShop implements BevShopInterface {
 		return total;
 	}
 
-	@Override
-	public int totalNumOfMonthlyOrders() {
-		return orders.size();
-	}
-
-	@Override
-	public Order getCurrentOrder() {
-
-	}
-
-	@Override
-	public Order getOrderAtIndex(int index) {
-		Order orderAtIndex = orders.get(index);
-		int time = orderAtIndex.getOrderTime();
-		Day day = orderAtIndex.getOrderDay();
-		Customer customer = orderAtIndex.getCustomer();
-
-		return new Order(time, day, customer); //shallow copy
-	}
-
-	@Override
 	public void sortOrders() {
-		//using selection sort
-		for (int i = 0; i < orders.size(); i++) {
+		int size = orders.size();
 
+		for (int i = 0; i < size; i++) {
+			double minValue = orders.get(i).calcOrderTotal();
+			int indexOfMin = i;
+
+			for (int j = i + 1; j < size; j++){
+				if (orders.get(j).calcOrderTotal() < minValue){
+					minValue = orders.get(j).calcOrderTotal();
+					indexOfMin = j;
+				}
+				Order temp = orders.get(i);
+				orders.set(i, orders.get(indexOfMin));
+				orders.set(indexOfMin, temp);
+			}
 		}
+	}
+
+	@Override
+	public String toString(){
+		String repOfAllOrders = "";
+
+		for (Order order : orders)
+			repOfAllOrders += order.toString() + "\n\n";
+
+		return repOfAllOrders + '\n'
+			+ "Total monthly sale: " + totalMonthlySale();
 	}
 }
