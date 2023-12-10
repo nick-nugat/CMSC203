@@ -28,6 +28,8 @@ public class Smoothie extends Beverage {
 
 		return price;
 	}
+	public int getNumOfFruits() { return numOfFruits; }
+	public boolean getAddProtein() { return addProtein; }
 
 	@Override
 	public boolean equals(Object obj){
@@ -47,6 +49,4 @@ public class Smoothie extends Beverage {
 				+ "Price: " + calcPrice();
 	}
 
-	public int getNumOfFruits() { return numOfFruits; }
-	public boolean getAddProtein() { return addProtein; }
 }

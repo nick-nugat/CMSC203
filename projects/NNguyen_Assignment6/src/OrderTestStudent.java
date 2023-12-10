@@ -222,26 +222,23 @@ public class OrderTestStudent {
 
 	@Test
 	public void testToString() {
-		String representationOfBeverages = "";
-		String expected;
+		String expected =
+				"""
+				Order number: %d
+				Order time: 20
+				Order day: SUNDAY
+				Customer name: Nick
+				Customer age: 17
+				List of beverages:
+				-------------
+				Name: mocha
+				Size: LARGE
+				Extra shot: true
+				Extra syrup: true
+				Price: 5.0
+				""";
 
 		orderOne.addNewBeverage("mocha", Size.LARGE, true, true);
-
-		for (Beverage b : orderOne.beverages)
-			representationOfBeverages += b.toString() + '\n';
-
-		expected =
-			String.format(
-				orderStringTemplate,
-					orderOne.getOrderNo(),
-					orderOne.getOrderTime(),
-					orderOne.getOrderDay(),
-					orderOne.getCustomer().getName(),
-					orderOne.getCustomer().getAge(),
-					representationOfBeverages
-			);
-
-		assertEquals(expected, orderOne.toString());
-
+		assertEquals(String.format(expected, orderOneNum), orderOne.toString());
 	}
 }

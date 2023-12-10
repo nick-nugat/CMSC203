@@ -212,6 +212,40 @@ public class BevShopTestStudent {
 
 	@Test
 	public void testToString(){
-		throw new UnsupportedOperationException("Method not implemented yet");
+		String expected =
+				"""
+				Order number: 0
+				Order time: 10
+				Order day: MONDAY
+				Customer name: Nicky
+				Customer age: 30
+				List of beverages:
+				-------------
+				Name: mocha
+				Size: SMALL
+				Extra shot: false
+				Extra syrup: false
+				Price: 2.0
+				Name: beer
+				Size: LARGE
+				Available on weekend: false
+				Price: 4.0
+				Name: mango
+				Size: MEDIUM
+				Protein added: false
+				Number of fruits: 1
+				Price: 3.5
+					
+					
+					
+				Total monthly sale: 9.5""";
+
+		BevShop temp = new BevShop();
+		temp.startNewOrder(10, Day.MONDAY, "Nicky", 30);
+		temp.processCoffeeOrder("mocha", Size.SMALL, false, false); //2
+		temp.processAlcoholOrder("beer", Size.LARGE); //4
+		temp.processSmoothieOrder("mango", Size.MEDIUM, 1, false); //3.5
+
+		assertEquals(expected, temp.toString());
 	}
 }

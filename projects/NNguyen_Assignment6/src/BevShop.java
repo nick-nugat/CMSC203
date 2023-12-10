@@ -20,6 +20,7 @@ public class BevShop implements BevShopInterface {
 
 	//getters
 	public int getNumOfAlcoholDrink() {
+
 		for (int i = 0; i < getCurrentOrder().beverages.size(); i++)
 			if (getCurrentOrder().beverages.get(i).getType() == Type.ALCOHOL)
 				numOfAlcohol++;
@@ -44,7 +45,7 @@ public class BevShop implements BevShopInterface {
 	}
 
 	public boolean isEligibleForMore() {
-		return numOfAlcohol < MAX_ORDER_FOR_ALCOHOL;
+		return getNumOfAlcoholDrink() <= MAX_ORDER_FOR_ALCOHOL;
 	}
 
 	public int getMaxNumOfFruits() {

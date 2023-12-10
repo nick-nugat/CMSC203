@@ -128,7 +128,7 @@ public class Order implements OrderInterface, Comparable<Order>{
 				+ "Customer name: " + customer.getName() + '\n'
 				+ "Customer age: " + customer.getAge() + '\n'
 				+ "List of beverages:" + '\n'
-			    + "----------" + '\n'
+			    + "-------------" + '\n'
 				+ representationOfBeverages;
 	}
 }

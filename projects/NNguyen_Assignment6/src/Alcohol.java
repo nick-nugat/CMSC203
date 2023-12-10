@@ -10,7 +10,7 @@
  */
 
 public class Alcohol extends Beverage {
-	private final boolean isWeekend;
+	private boolean isWeekend;
 
 	public Alcohol(String name, Size size, boolean isWeekend){
 		super(name, Type.ALCOHOL, size);

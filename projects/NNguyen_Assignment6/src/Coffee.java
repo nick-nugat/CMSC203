@@ -10,7 +10,8 @@
  */
 
 public class Coffee extends Beverage {
-	private final boolean extraShot, extraSyrup;
+	private boolean extraShot;
+	private boolean extraSyrup;
 
 	public Coffee(String name, Size size, boolean extraShot, boolean extraSyrup){
 		super(name, Type.COFFEE, size);
